@@ -1,0 +1,7 @@
+{
+  "name": "@wcd/yukta2000.lwc-l2osn73w-fork-l2ox73ez",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "npx wcd-cli@latest serve O5qXWS8RIxDhlz3HQtZM --open"
+  }
+}
