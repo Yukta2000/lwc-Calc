@@ -2,12 +2,12 @@
  
   <input type="number" class="num1" onchange={setNum1}/>
   <input type="number" class="num2" onchange={setNum2}/>
-  <div class="calc-operations">
-    <button name="sum" onclick={add}>+</button>
-    <button name="sub" onclick={subtract}>-</button>
-    <button name="mul" onclick={multiply}>*</button>
-    <button name="divide" onclick={divide}>/</button>
-    <button name="clear" onclick={clear}>CLR</button>
+  <div class="calc-operations" onclick={setAnswer}>
+    <button class="sum" >+</button>
+    <button class="sub" >-</button>
+    <button class="mul" >*</button>
+    <button class="divide" >/</button>
+    <button class="clear" >CLR</button>
   </div>
   <div class="answer">
   Answer: {answer}
