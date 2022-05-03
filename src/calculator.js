@@ -1,4 +1,5 @@
 import { LightningElement } from "lwc";
+import {add,subtract,multiply,divide} from "c/calcOperations.js";
 
 export default class calculator extends LightningElement{
   num1=0;
@@ -13,22 +14,6 @@ export default class calculator extends LightningElement{
    this.num2 = Number(event.target.value);
   }
 
-  add(){
-   this.answer = this.num1 + this.num2;
-  }
-
-  subtract(){
-    this.answer = this.num1 - this.num2;
-  }
-
-  multiply(){
-   this.answer = this.num1 * this.num2;
-  }
-
-  divide(){
-    this.answer = this.num1 / this.num2;
-  }
-
   clear(){
     this.num1="";
     this.num2="";
@@ -36,4 +21,20 @@ export default class calculator extends LightningElement{
     this.template.querySelector(".num2").value="";
     this.answer="";
   }
+  
+  setAnswer(event){
+    let op = event.target.classList[0];
+    switch(op){
+      case "sum": this.answer=add(this.num1,this.num2);
+                  break;
+      case "sub": this.answer= subtract(this.num1,this.num2);
+      break;
+      case "mul": this.answer=multiply(this.num1,this.num2);
+      break;
+      case "divide": this.answer=divide(this.num1,this.num2);
+      break;
+      case "clear": this.clear();
+    }
+  }
+
 }
